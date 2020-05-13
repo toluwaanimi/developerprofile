@@ -1,11 +1,10 @@
 import React from "react";
 import fire from "../../config/firebaseConfig";
-import firebase from "../../../../../../Bobs/reactjs-firebase-firestore-crud-master/src/Firebase";
 
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.ref = firebase.firestore().collection('profile');
+        this.ref = fire.firestore().collection('profile');
         this.state = {
             //the state here
         };
