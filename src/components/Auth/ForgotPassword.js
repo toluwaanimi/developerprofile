@@ -46,7 +46,7 @@ class ForgotPassword extends React.Component {
                                             </form>
                                             <div className="signup-link">
                                                 <p>Don't have an account yet?</p>
-                                                <a href="#">Sign Up</a>
+                                                <a href="/register">Sign Up</a>
                                             </div>
                                         </div>
                                     </div>

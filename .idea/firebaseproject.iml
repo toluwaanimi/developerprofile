@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="reactjs-firebase-firestore-crud-master" />
+    <orderEntry type="module" module-name="Label-Free-Bootstrap-Admin-Template-master" />
   </component>
 </module>

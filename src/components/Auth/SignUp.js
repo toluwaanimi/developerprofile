@@ -1,6 +1,7 @@
 import React from "react";
 import fire from "../../config/firebaseConfig";
 import history from "../../config/history";
+import {Link} from "react-router-dom";
 
 class SignUp extends React.Component {
 
@@ -22,7 +23,7 @@ class SignUp extends React.Component {
         e.preventDefault();
         fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
             e => {
-                history.push('login')
+                this.props.history.push('/account')
                 console.log(e)
             }
         ).catch(
@@ -61,7 +62,7 @@ class SignUp extends React.Component {
                                             </form>
                                             <div className="signup-link">
                                                 <p>Already registered?</p>
-                                                <a href="/login">Login</a>
+                                                <Link to='/login'>Sign In</Link>
                                             </div>
                                         </div>
                                     </div>

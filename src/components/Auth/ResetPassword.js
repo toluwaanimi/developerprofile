@@ -14,8 +14,8 @@ class ResetPassword extends React.Component {
     }
 
     handleReset(e) {
-        fire.auth().sendPasswordResetEmail(this.state.email).then(
-            e => console.log(e)
+        fire.auth().currentUser.updatePassword(this.state.confirm).then(
+            res => console.log(res)
         ).catch(
             error => console.log(error)
         )

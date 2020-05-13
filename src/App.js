@@ -7,7 +7,9 @@ import SignUp from "./components/Auth/SignUp";
 import ForgotPassword from "./components/Auth/ForgotPassword";
 import fire from "./config/firebaseConfig";
 import ResetPassword from "./components/Auth/ResetPassword";
-
+import Dashboard from "./components/Account/Dashboard";
+import '../src/assests/materialdesignicons.css'
+import NotFound from "./components/NotFound";
 
 /**basic functionalities
  * User Login
@@ -56,6 +58,8 @@ class App extends React.Component {
                         <Route path='/register' component={SignUp}/>
                         <Route path='/forgot' component={ForgotPassword}/>
                         <Route path='/reset' component={ResetPassword}/>
+                        <Route path='/account' component={Dashboard}/>
+                        <Route path='**' component={NotFound}/>
                     </Switch>
                     {/*{this.state.user ? (<SignUp/>) : (<Login/>)}*/}
                 </div>
