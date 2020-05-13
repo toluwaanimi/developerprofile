@@ -1,6 +1,35 @@
 import React from "react";
+import fire from "../../config/firebaseConfig";
+import firebase from "../../../../../../Bobs/reactjs-firebase-firestore-crud-master/src/Firebase";
 
 class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.ref = firebase.firestore().collection('profile');
+        this.state = {
+            //the state here
+        };
+
+
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+
+
+        this.ref.add({
+            //params
+        }).then((docRef) => {
+            this.setState({
+                //you can do anything with the data
+            });
+            this.props.history.push("/account")
+        })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+    }
+
     render() {
         return (
             <div>
@@ -101,6 +130,7 @@ class Profile extends React.Component {
             </div>
         );
     }
+
 }
 
 export default Profile;
